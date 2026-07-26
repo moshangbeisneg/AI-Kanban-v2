@@ -39,7 +39,12 @@
        <div class="board-info"><h2>项目看板</h2><span class="board-subtitle" id="taskTotal">共 0 个任务</span></div>
        <div class="board-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" id="searchInput" placeholder="搜索..." autocomplete="off"></div>
         <div class="board-actions">
-          <button class="secondary-btn" id="batchModeBtn">
+         <div class="export-dropdown"><button class="secondary-btn export-trigger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>导出 <span style="font-size:10px">▾</span></button>
+           <div class="export-menu"><button data-format="json">JSON</button><button data-format="csv">Excel (CSV)</button><button data-format="pdf">PDF</button></div></div>
+         <button class="secondary-btn" id="importBtn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>导入</button>
+         <input type="file" id="importFileInput" accept=".json" style="display:none">
+         <button class="secondary-btn" id="sortByPriorityBtn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>排序</button>
+         <button class="secondary-btn" id="batchModeBtn">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
             批量操作
           </button>
@@ -143,4 +148,5 @@
   <script src="js/app.js?v=2"></script>
 </body>
 </html>
+
 
