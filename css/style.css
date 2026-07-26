@@ -1381,6 +1381,6 @@ input, textarea, select {
 /* === Dark mode chat styles === */
 @media (prefers-color-scheme: dark) {
   .chat-user .chat-bubble { background: var(--primary); color: #fff; }
-  .chat-ai .chat-bubble { background: #2a2a2a; color: #e0e0e0; }
-  .ai-chat-input { background: #1a1a1a; border-color: #333; }
+  .chat-ai .chat-bubble { background: var(--surface); color: var(--text); }
+  .ai-chat-input { background: var(--surface); border-color: #555; }
 }
